@@ -4,10 +4,12 @@ const knex=require('knex')({
   client:'pg',
   connection: 'postgres://ocdlnqxr:3jP9oxE48hddqlbOsinSvMO33z08iITI@isilo.db.elephantsql.com:5432/ocdlnqxr'
 });
+//connecting to online database
 
 const app=express();
 app.use(bodyParser.json());
 
+//creating table for one time
 knex.schema.createTable('user', (table) => {
   table.increments('id')
   table.string('data')
@@ -19,6 +21,7 @@ knex.schema.createTable('user', (table) => {
   console.log(err);
 })
 
+//get request to fetch data's
 app.get('/',(req,res)=>{
   const {id}=req.body;
   knex.from('user')
@@ -35,6 +38,7 @@ app.get('/',(req,res)=>{
   })
 })
 
+//post request to insert into table
 app.post('/',(req,res)=>{
   const {id,data}=req.body;
   knex('user')
