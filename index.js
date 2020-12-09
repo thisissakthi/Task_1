@@ -4,11 +4,11 @@ const knex=require('knex')({
   client:'pg',
   connection: 'postgres://ocdlnqxr:3jP9oxE48hddqlbOsinSvMO33z08iITI@isilo.db.elephantsql.com:5432/ocdlnqxr'
 });
-
+/* connected to online DataBase */
 const app=express();
 app.use(bodyParser.json());
 
-knex.schema.createTable('user', (table) => {
+/*knex.schema.createTable('user', (table) => {
   table.increments('id')
   table.string('data')
 }).then(()=>
@@ -18,6 +18,8 @@ knex.schema.createTable('user', (table) => {
 .catch((err)=>{
   console.log(err);
 })
+Initially created to table
+*/
 
 app.get('/',(req,res)=>{
   const {id}=req.body;
