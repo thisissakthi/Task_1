@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "ocdlnqxr",
-    "password": "3jP9oxE48hddqlbOsinSvMO33z08iITI",
-    "database": "ocdlnqxr",
-    "host": "isilo.db.elephantsql.com",
+    "username": "postgres",
+    "password": "mspprasath",
+    "database": "task_1",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {

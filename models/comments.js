@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(user_application_details) {
       // define association here
-      this.belongsTo(user_application_details,{app_id,user_id})
+      //this.belongsTo(user_application_details,{app_id,user_id})
     }
   };
   comments.init({
