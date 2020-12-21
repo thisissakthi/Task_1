@@ -28,6 +28,10 @@ module.exports = (sequelize, DataTypes) => {
       isUrl:true,
       allowNull:false
     },
+    owner_id:{
+      type:DataTypes.INTEGER,
+      allowNull:false
+    },
     description: {
       type:DataTypes.STRING,
       len:[150,1500],
