@@ -39,6 +39,25 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.INTEGER,
       allowNull:false
     },
+    icon_url: {
+      type:DataTypes.STRING,
+      allowNull:false,
+      isUrl:true
+    },
+    description: {
+      type:DataTypes.STRING,
+      len:[150,1500],
+      allowNull:false
+    },
+    screenshots_url:{
+      type: DataTypes.STRING,
+      isUrl:true,
+      allowNull:false
+    },
+    related_website_url:{
+      type:DataTypes.STRING,
+      isUrl:true
+    },
     category_id:
     {
       type:DataTypes.INTEGER,
@@ -50,7 +69,15 @@ module.exports = (sequelize, DataTypes) => {
       allowNull:false,
       max:5,
       min:0
-    }
+    },
+    language: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
+    visibility: {
+      type:DataTypes.STRING,
+      allowNull:false
+  }
   }, {
     sequelize,
     tableName:'applications',
